@@ -48,6 +48,9 @@ jobs:
         with:
           node-version: '16'
 
+      - name: Remove untracked dist/index.json
+        run: rm -f dist/index.json
+
       - name: Install Dependencies
         run: npm install
 
