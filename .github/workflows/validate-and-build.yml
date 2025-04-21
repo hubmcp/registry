@@ -48,8 +48,14 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Remove untracked dist/index.json
-        run: rm -f dist/index.json
+      # - name: Checkout gh-pages branch
+      #   uses: actions/checkout@v3
+      #   with:
+      #     ref: gh-pages
+      #     fetch-depth: 0
+
+      - name: Remove untracked files before checkout
+        run: git clean -fdx
 
       - name: Install Dependencies
         run: npm install
