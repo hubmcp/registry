@@ -1,20 +1,18 @@
-# CODEOWNERS para hubmcp/registry
+# CODEOWNERS for hubmcp/registry
 
-# Donos gerais de todo o repositório
-*       @hubmcp/registry-maintainers
+# General ownership
+*                             @hubmcp/registry-maintainers
 
-# Schema de metadados
-/schema/metadata.schema.json    @hubmcp/schema-maintainers
+# Schema
+/schema/metadata.schema.json @hubmcp/schema-maintainers
 
-# Entradas do registry
-/entries/                       @hubmcp/registry-maintainers @hubmcp/community-contributors
+# Entries
+/entries/                     @hubmcp/registry-maintainers @hubmcp/community-contributors
 
-# Workflows de CI/CD
-.github/workflows/              @hubmcp/ci-team
+# GitHub workflows
+.github/workflows/            @hubmcp/ci-team
 
-# Documentação e website
-README.md                       @hubmcp/docs-team
-website/                        @hubmcp/docs-team
-
-# Branding (logo, paleta, assets)
-branding/                       @hubmcp/design-team
+# Documentation
+README.md                     @hubmcp/docs-team
+CONTRIBUTING.md               @hubmcp/docs-team
+    

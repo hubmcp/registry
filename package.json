@@ -1,0 +1,13 @@
+{
+  "name": "mcp-registry",
+  "version": "0.1.0",
+  "description": "Registry of MCP package metadata",
+  "main": "build-index.js",
+  "scripts": {
+    "validate": "ajv validate -s schema/metadata.schema.json -d entries/*.json",
+    "build": "node build-index.js"
+  },
+  "devDependencies": {
+    "ajv-cli": "^5.0.0"
+  }
+}
