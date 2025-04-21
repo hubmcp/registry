@@ -63,6 +63,9 @@ jobs:
       - name: Build Index
         run: npm run build && cp dist/index.json /tmp/index.json
 
+      - name: Remove dist/index.json before switching branch
+        run: rm -f dist/index.json
+
       - name: Checkout gh-pages branch
         run: |
           git fetch origin gh-pages:gh-pages
