@@ -33,9 +33,10 @@ jobs:
         run: npm install
       - name: Build Index
         run: npm run build
-      - name: Commit dist/index.json to main
+      - name: Commit dist/index.json back to main
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: 'chore: update dist/index.json'
           branch: main
           file_pattern: dist/index.json
+          add_untracked_files: true
