@@ -1,9 +1,10 @@
 [
   {
     "name": "example-mcp",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "An example MCP package for testing",
     "repository": "https://github.com/hubmcp/example-mcp",
+    "sseEndpoint": "https://example.com/sse",
     "qualityScore": 0.5
   }
 ]
