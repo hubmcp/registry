@@ -1,0 +1,9 @@
+[
+  {
+    "name": "example-mcp",
+    "version": "0.1.0",
+    "description": "An example MCP package for testing",
+    "repository": "https://github.com/hubmcp/example-mcp",
+    "qualityScore": 0.5
+  }
+]
