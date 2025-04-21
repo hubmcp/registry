@@ -61,7 +61,15 @@ jobs:
         run: npm install
 
       - name: Build Index
-        run: npm run build
+        run: npm run build && cp dist/index.json /tmp/index.json
+
+      - name: Checkout gh-pages branch
+        run: |
+          git fetch origin gh-pages:gh-pages
+          git checkout gh-pages
+
+      - name: Copy built index.json from temp
+        run: cp /tmp/index.json dist/index.json
 
       - name: Commit dist/index.json back to gh-pages
         uses: stefanzweifel/git-auto-commit-action@v4
