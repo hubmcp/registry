@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "description": "Registry of MCP package metadata",
   "main": "build-index.js",
-  "type": "module",
   "scripts": {
     "validate": "node validate.js",
     "build": "node build-index.js"

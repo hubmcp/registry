@@ -1,5 +1,5 @@
-import fs from 'fs';
-import path from 'path';
+const fs = require('fs');
+const path = require('path');
 
 const entriesDir = path.join(process.cwd(), 'entries');
 const files = fs.readdirSync(entriesDir).filter(f => f.endsWith('.json'));
