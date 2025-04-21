@@ -1,14 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 
-const entriesDir = path.join(process.cwd(), 'entries');
+const entriesDir = path.join(__dirname, '../entries');
 const files = fs.readdirSync(entriesDir).filter(f => f.endsWith('.json'));
 const entries = files.map(f => {
   const content = fs.readFileSync(path.join(entriesDir, f), 'utf-8');
   return JSON.parse(content);
 });
 
-const distDir = path.join(process.cwd(), 'dist');
+const distDir = path.join(__dirname, '../dist');
 if (!fs.existsSync(distDir)) fs.mkdirSync(distDir);
 fs.writeFileSync(
   path.join(distDir, 'index.json'),

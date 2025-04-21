@@ -6,8 +6,8 @@ const path = require("path");
 const ajv = new Ajv({ strict: false });
 addFormats(ajv);
 
-const schemaPath = path.join(__dirname, "schema/metadata.schema.json");
-const entriesDir = path.join(__dirname, "entries");
+const schemaPath = path.join(__dirname, "../schema/metadata.schema.json");
+const entriesDir = path.join(__dirname, "../entries");
 
 const schema = JSON.parse(fs.readFileSync(schemaPath, "utf8"));
 const entryFiles = fs.readdirSync(entriesDir).filter(f => f.endsWith(".json"));
