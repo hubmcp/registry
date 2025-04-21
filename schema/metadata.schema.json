@@ -25,6 +25,18 @@
       "type": "string",
       "format": "uri"
     },
+    "stars": {
+      "type": "number",
+      "minimum": 0
+    },
+    "forks": {
+      "type": "number",
+      "minimum": 0
+    },
+    "lastPushed": {
+      "type": "string",
+      "format": "date-time"
+    },
     "sseEndpoint": {
       "type": "string",
       "format": "uri"
@@ -33,6 +45,9 @@
       "type": "number",
       "minimum": 0,
       "maximum": 1
+    },
+    "verified": {
+      "type": "boolean"
     }
   }
 }

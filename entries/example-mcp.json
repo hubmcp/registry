@@ -3,6 +3,10 @@
     "version": "0.1.1",
     "description": "An example MCP package for testing",
     "repository": "https://github.com/hubmcp/example-mcp",
+    "stars": 10,
+    "forks": 5,
+    "lastPushed": "2023-01-01T00:00:00Z",
     "sseEndpoint": "https://example.com/sse",
-    "qualityScore": 0.5
+    "qualityScore": 0.5,
+    "verified": true
 }
