@@ -15,12 +15,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          # ensure the token is available for pushes
+          persist-credentials: true
+          # fetch full history so we can push back
+          fetch-depth: 0
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '16'
+
       - name: Install Dependencies
         run: npm install
+
       - name: Validate Entries
         run: npm run validate
 
@@ -46,9 +54,9 @@ jobs:
       - name: Build Index
         run: npm run build
 
-      - name: Commit dist/index.json back to main
+      - name: Commit dist/index.json back to gh-pages
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: 'chore: update dist/index.json'
-          branch: main
+          branch: gh-pages
           file_pattern: dist/index.json
