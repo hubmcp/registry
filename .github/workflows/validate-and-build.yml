@@ -16,9 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          # ensure the token is available for pushes
           persist-credentials: true
-          # fetch full history so we can push back
           fetch-depth: 0
 
       - name: Setup Node.js
@@ -38,21 +36,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          # ensure the token is available for pushes
           persist-credentials: true
-          # fetch full history so we can push back
           fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '16'
-
-      # - name: Checkout gh-pages branch
-      #   uses: actions/checkout@v3
-      #   with:
-      #     ref: gh-pages
-      #     fetch-depth: 0
 
       - name: Remove untracked files before checkout
         run: git clean -fdx
