@@ -67,6 +67,15 @@ jobs:
       - name: Copy built dist folder from temp
         run: cp -r /tmp/dist/* dist/
 
+      - name: List dist contents
+        run: ls -l dist
+
+      - name: Show git status
+        run: git status
+
+      - name: Show git diff
+        run: git diff dist/
+
       - name: Commit dist/index.json back to gh-pages
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
