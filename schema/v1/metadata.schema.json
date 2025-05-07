@@ -7,12 +7,8 @@
     "required": [
       "id",
       "name",
-      "version",
       "description",
       "repository",
-      "license",
-      "url",
-      "lastPushed",
       "score",
       "verified"
     ],
@@ -23,47 +19,31 @@
       "name": {
         "type": "string"
       },
-      "version": {
-        "type": "string",
-        "pattern": "^\\d+\\.\\d+\\.\\d+$"
-      },
+
       "description": {
         "type": "string"
       },
       "license": {
         "type": "string"
       },
-      "url": {
-        "type": "string",
-        "format": "uri"
-      },
       "repository": {
         "type": "object",
         "required": [
-          "url",
-          "stars"
+          "id",
+          "url"
         ],
         "properties": {
+          "id": {
+            "type": "string"
+          },
           "url": {
             "type": "string",
             "format": "uri"
-          },
-          "stars": {
-            "type": "number",
-            "minimum": 0
           }
         }
       },
-      "lastPushed": {
-        "type": "string",
-        "format": "date-time"
-      },
+
       "score": {
-        "type": "number",
-        "minimum": 0,
-        "maximum": 1
-      },
-      "qualityScore": {
         "type": "number",
         "minimum": 0,
         "maximum": 1
@@ -71,13 +51,71 @@
       "verified": {
         "type": "boolean"
       },
-      "sseEndpoint": {
-        "type": "string",
-        "format": "uri"
+      "packages": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["registry", "name", "version", "license", "command"],
+          "properties": {
+            "registry": { "type": "string" },
+            "name": { "type": "string" },
+            "version": {
+              "type": "object",
+              "required": ["number", "release_date"],
+              "properties": {
+                "number": { "type": "string" },
+                "release_date": { "type": "string", "format": "date-time" }
+              }
+            },
+            "license": { "type": "string" },
+            "command": {
+              "type": "object",
+              "required": ["name", "subcommands", "positional_arguments", "named_arguments"],
+              "properties": {
+                "name": { "type": "string" },
+                "subcommands": { "type": "array", "items": { "type": "string" } },
+                "positional_arguments": { "type": "array", "items": { "type": "string" } },
+                "named_arguments": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["short_flag", "requires_value", "is_required", "description"],
+                    "properties": {
+                      "short_flag": { "type": "string" },
+                      "requires_value": { "type": "boolean" },
+                      "is_required": { "type": "boolean" },
+                      "description": { "type": "string" }
+                    }
+                  }
+                }
+              }
+            },
+            "environment_variables": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["name", "description", "required", "default_value"],
+                "properties": {
+                  "name": { "type": "string" },
+                  "description": { "type": "string" },
+                  "required": { "type": "boolean" },
+                  "default_value": { "type": "string" }
+                }
+              }
+            }
+          }
+        }
       },
-      "forks": {
-        "type": "number",
-        "minimum": 0
+      "remotes": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["transport_type", "url"],
+          "properties": {
+            "transport_type": { "type": "string" },
+            "url": { "type": "string", "format": "uri" }
+          }
+        }
       }
     }
   }
