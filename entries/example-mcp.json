@@ -1,12 +1,17 @@
-{
+[
+  {
+    "id": "87efdf29-e0f1-4f4d-a5e1-ecbe9a9ca73b",
     "name": "example-mcp",
-    "version": "0.1.4",
     "description": "An example MCP package for testing",
-    "repository": "https://github.com/registrymcp/example-mcp",
-    "stars": 10,
-    "forks": 5,
+    "version": "0.1.4",
+    "license": "Apache-2.0",
+    "url": "https://example.com/mcp",
+    "repository": {
+      "url": "https://github.com/registrymcp/example-mcp",
+      "stars": 10
+    },
     "lastPushed": "2023-01-01T00:00:00Z",
-    "sseEndpoint": "https://example.com/sse",
-    "qualityScore": 0.5,
+    "score": 0.5,
     "verified": true
-}
+  }
+]

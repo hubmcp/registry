@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MCP Registry Entry Array",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "name",
+      "version",
+      "description",
+      "repository",
+      "license",
+      "url",
+      "lastPushed",
+      "score",
+      "verified"
+    ],
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "version": {
+        "type": "string",
+        "pattern": "^\\d+\\.\\d+\\.\\d+$"
+      },
+      "description": {
+        "type": "string"
+      },
+      "license": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string",
+        "format": "uri"
+      },
+      "repository": {
+        "type": "object",
+        "required": [
+          "url",
+          "stars"
+        ],
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "stars": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      },
+      "lastPushed": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "score": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "qualityScore": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "verified": {
+        "type": "boolean"
+      },
+      "sseEndpoint": {
+        "type": "string",
+        "format": "uri"
+      },
+      "forks": {
+        "type": "number",
+        "minimum": 0
+      }
+    }
+  }
+}
