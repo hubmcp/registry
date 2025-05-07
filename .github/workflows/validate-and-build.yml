@@ -76,9 +76,13 @@ jobs:
       - name: Show git diff
         run: git diff dist/
 
-      - name: Commit dist/index.json back to gh-pages
+      - name: Add dist files to git
+        run: git add dist/*
+
+      - name: Commit dist back to gh-pages
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: 'chore: update dist/index.json'
+          commit_message: 'chore: update dist'
           branch: gh-pages
+          file_pattern: dist/*
           file_pattern: dist/index.json
