@@ -2,12 +2,52 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "MCP Registry Entry",
   "type": "object",
-  "required": ["name", "version", "description", "repository", "qualityScore"],
+  "required": [
+    "name",
+    "version",
+    "description",
+    "repository",
+    "sseEndpoint",
+    "qualityScore"
+  ],
   "properties": {
-    "name":         { "type": "string" },
-    "version":      { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
-    "description":  { "type": "string" },
-    "repository":   { "type": "string", "format": "uri" },
-    "qualityScore": { "type": "number", "minimum": 0, "maximum": 1 }
+    "name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "description": {
+      "type": "string"
+    },
+    "repository": {
+      "type": "string",
+      "format": "uri"
+    },
+    "stars": {
+      "type": "number",
+      "minimum": 0
+    },
+    "forks": {
+      "type": "number",
+      "minimum": 0
+    },
+    "lastPushed": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sseEndpoint": {
+      "type": "string",
+      "format": "uri"
+    },
+    "qualityScore": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "verified": {
+      "type": "boolean"
+    }
   }
 }
