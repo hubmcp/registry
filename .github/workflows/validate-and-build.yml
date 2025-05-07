@@ -85,4 +85,3 @@ jobs:
           commit_message: 'chore: update dist'
           branch: gh-pages
           file_pattern: dist/*
-          file_pattern: dist/index.json
