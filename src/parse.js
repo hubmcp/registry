@@ -23,8 +23,6 @@ function convertToV1(entry) {
             id: entry.repository?.name || '',
             url: entry.repository?.url || '',
         },
-        score: typeof entry.score === 'number' ? entry.score : 0,
-        verified: typeof entry.verified === 'boolean' ? entry.verified : false,
         packages: (entry.registries || []).map(pkg => ({
             registry: pkg.name || '',
             name: pkg.packagename || '',
