@@ -67,7 +67,7 @@ Want to add a new MCP package to the index? Follow these steps:
   npm run build
   ```
 - Browse the registry:
-  See the file [dist/index.v1.json](dist/index.v1.json)
+  See the file [dist/index.v1.json](https://index.mcpregistry.click/dist/index.v1.json)
 
 ## References
 - [Metadata schema](schema/v1/metadata.schema.json)
