@@ -55,7 +55,7 @@ function convertToV1(entry) {
     return removeEmptyFields({
         id: entry.id,
         name: entry.name,
-        description: entry.description || '',
+        description: entry.description || entry.name,
         license: entry.license && entry.license.trim() !== '' ? entry.license : 'Apache-2.0',
         repository: {
             id: entry.repository?.name || '',
@@ -70,21 +70,34 @@ function convertToV1(entry) {
                     number: String(pkg.version || entry.version || ''),
                     release_date: pkg.release_date || new Date().toISOString(),
                 },
-                command: {
-                    name: (pkg.commandarguments && pkg.commandarguments.name) ? pkg.commandarguments.name : '',
-                    subcommands: (pkg.commandarguments && pkg.commandarguments.subcommands) ? pkg.commandarguments.subcommands : [],
-                    positional_arguments: (pkg.commandarguments && pkg.commandarguments.positionalarguments)
-                        ? pkg.commandarguments.positionalarguments.map(arg => arg.argument?.name || '')
-                        : [],
-                    named_arguments: (pkg.commandarguments && pkg.commandarguments.namedarguments)
-                        ? pkg.commandarguments.namedarguments.map(arg => ({
-                            short_flag: arg.argument?.name || '',
-                            requires_value: arg.argument?.isrequired || false,
-                            is_required: arg.argument?.isrequired || false,
-                            description: arg.argument?.description || '',
-                        }))
-                        : [],
-                },
+                command: (() => {
+                    // Garante que todos os campos obrigatórios estejam presentes e válidos
+                    const positional = Array.isArray(pkg.commandarguments?.positionalarguments)
+                        ? pkg.commandarguments.positionalarguments.map(arg => arg.argument?.name || '').filter(Boolean)
+                        : [];
+                    let name = '';
+                    if (pkg.commandarguments && typeof pkg.commandarguments.name === 'string' && pkg.commandarguments.name.trim() !== '') {
+                        name = pkg.commandarguments.name;
+                    } else if (positional.length > 0) {
+                        name = positional[0];
+                    } else {
+                        name = 'run';
+                    }
+                    return {
+                        name,
+                        subcommands: Array.isArray(pkg.commandarguments?.subcommands)
+                            ? pkg.commandarguments.subcommands.filter(s => typeof s === 'string')
+                            : [],
+                        positional_arguments: positional,
+                        named_arguments: Array.isArray(pkg.commandarguments?.namedarguments)
+                            ? pkg.commandarguments.namedarguments.map(arg => ({
+                                short_flag: arg.argument?.name || '',
+                                required: arg.argument?.isrequired || false,
+                                description: arg.argument?.description || '',
+                            }))
+                            : [],
+                    };
+                })(),
                 environment_variables: (pkg.environmentvariables || []).map(env => ({
                     name: env.name || '',
                     description: env.description || '',

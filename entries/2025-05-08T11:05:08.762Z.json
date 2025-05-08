@@ -14,9 +14,10 @@
         "name": "21st-dev",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.939Z"
+          "release_date": "2025-05-08T11:05:08.768Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@21st-dev/magic@latest"
@@ -24,8 +25,7 @@
           "named_arguments": [
             {
               "short_flag": "API_KEY",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             }
           ]
@@ -68,9 +68,10 @@
         "name": "agentrpc",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.768Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "agentrpc",
@@ -95,9 +96,10 @@
         "name": "Aiven-Open",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.768Z"
         },
         "command": {
+          "name": "--directory",
           "positional_arguments": [
             "--directory",
             "$REPOSITORY_DIRECTORY",
@@ -127,9 +129,10 @@
         "name": "apache",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.768Z"
         },
         "command": {
+          "name": "--directory",
           "positional_arguments": [
             "--directory",
             "YOUR_REPO_PATH/src/iotdb_mcp_server",
@@ -185,9 +188,10 @@
         "name": "datastax",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.768Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@datastax/astra-db-mcp"
@@ -251,9 +255,10 @@
         "name": "Bankless",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.768Z"
         },
         "command": {
+          "name": "@bankless/onchain-mcp",
           "positional_arguments": [
             "@bankless/onchain-mcp"
           ]
@@ -296,9 +301,10 @@
         "name": "box-community",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.768Z"
         },
         "command": {
+          "name": "--directory",
           "positional_arguments": [
             "--directory",
             "/Users/anovotny/Desktop/mcp-server-box",
@@ -362,6 +368,7 @@
   {
     "id": "ae299e36-b2b0-4250-8314-d2223ae8eab7",
     "name": "io.github.clickhouse/mcp-clickhouse",
+    "description": "io.github.clickhouse/mcp-clickhouse",
     "license": "Apache-2.0",
     "repository": {
       "id": "ClickHouse/mcp-clickhouse",
@@ -373,9 +380,10 @@
         "name": "ClickHouse",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.768Z"
         },
         "command": {
+          "name": "run",
           "positional_arguments": [
             "run",
             "--with",
@@ -391,6 +399,7 @@
   {
     "id": "f6779094-73a4-4694-ac67-f90f72e16c6f",
     "name": "io.github.cloudflare/mcp-server-cloudflare",
+    "description": "io.github.cloudflare/mcp-server-cloudflare",
     "license": "Apache-2.0",
     "repository": {
       "id": "cloudflare/mcp-server-cloudflare",
@@ -412,9 +421,10 @@
         "name": "codacy",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.768Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@codacy/codacy-mcp"
@@ -468,9 +478,10 @@
         "name": "its-dart",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.768Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "dart-mcp-server"
@@ -512,6 +523,7 @@
   {
     "id": "d5d81e76-6f9e-4fe4-a8a0-6c23884ca6dc",
     "name": "io.github.elastic/mcp-server-elasticsearch",
+    "description": "io.github.elastic/mcp-server-elasticsearch",
     "license": "Apache-2.0",
     "repository": {
       "id": "elastic/mcp-server-elasticsearch",
@@ -523,9 +535,10 @@
         "name": "elastic",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.768Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@elastic/mcp-server-elasticsearch"
@@ -559,9 +572,10 @@
         "name": "exa-labs",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.768Z"
         },
         "command": {
+          "name": "/path/to/exa-mcp-server/build/index.js",
           "positional_arguments": [
             "/path/to/exa-mcp-server/build/index.js"
           ]
@@ -582,6 +596,7 @@
   {
     "id": "91c2cb28-6c2e-4f96-8b05-c6e11398402d",
     "name": "io.github.fibery-inc/fibery-mcp-server",
+    "description": "io.github.fibery-inc/fibery-mcp-server",
     "license": "Apache-2.0",
     "repository": {
       "id": "Fibery-inc/fibery-mcp-server",
@@ -593,9 +608,10 @@
         "name": "Fibery-inc",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.768Z"
         },
         "command": {
+          "name": "tool",
           "positional_arguments": [
             "tool",
             "run",
@@ -634,9 +650,10 @@
         "name": "mendableai",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.768Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "firecrawl-mcp"
@@ -668,6 +685,7 @@
   {
     "id": "9b53681e-2e0d-4021-a5ad-00e5a51d6d31",
     "name": "io.github.gotohuman/gotohuman-mcp-server",
+    "description": "io.github.gotohuman/gotohuman-mcp-server",
     "license": "Apache-2.0",
     "repository": {
       "id": "gotohuman/gotohuman-mcp-server",
@@ -709,9 +727,10 @@
         "name": "GreptimeTeam",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "--directory",
           "positional_arguments": [
             "--directory",
             "/path/to/greptimedb-mcp-server",
@@ -746,6 +765,7 @@
   {
     "id": "27649556-781d-4c8e-9d31-2d20fcbc12a9",
     "name": "io.github.aliyun/alibabacloud-hologres-mcp-server",
+    "description": "io.github.aliyun/alibabacloud-hologres-mcp-server",
     "license": "Apache-2.0",
     "repository": {
       "id": "aliyun/alibabacloud-hologres-mcp-server",
@@ -767,9 +787,10 @@
         "name": "hyperbrowserai",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "hyperbrowser-mcp"
@@ -821,6 +842,7 @@
   {
     "id": "3605a28f-084c-4ed4-91d7-0856e7ece444",
     "name": "io.github.integration-app/mcp-server",
+    "description": "io.github.integration-app/mcp-server",
     "license": "Apache-2.0",
     "repository": {
       "id": "integration-app/mcp-server",
@@ -832,9 +854,10 @@
         "name": "integration-app",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@integration-app/mcp-server"
@@ -858,9 +881,10 @@
         "name": "JetBrains",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@jetbrains/mcp-proxy"
@@ -882,6 +906,7 @@
   {
     "id": "0274915f-7988-4a4e-bb48-d3bed6f2e894",
     "name": "io.github.keboola/keboola-mcp-server",
+    "description": "io.github.keboola/keboola-mcp-server",
     "license": "Apache-2.0",
     "repository": {
       "id": "keboola/keboola-mcp-server",
@@ -891,6 +916,7 @@
   {
     "id": "98bd9dd1-3a94-41fa-a91e-f8ab5974e057",
     "name": "io.github.translated/lara-mcp",
+    "description": "io.github.translated/lara-mcp",
     "license": "Apache-2.0",
     "repository": {
       "id": "translated/lara-mcp",
@@ -902,9 +928,10 @@
         "name": "translated",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@translated/lara-mcp@latest"
@@ -968,9 +995,10 @@
         "name": "integromat",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@makehq/mcp-server"
@@ -1024,9 +1052,10 @@
         "name": "momentohq",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@gomomento/mcp-momento"
@@ -1050,9 +1079,10 @@
         "name": "rember",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@getrember/mcp"
@@ -1060,8 +1090,7 @@
           "named_arguments": [
             {
               "short_flag": "--api-key",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             }
           ]
@@ -1094,9 +1123,10 @@
         "name": "needle-ai",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "--directory",
           "positional_arguments": [
             "--directory",
             "/path/to/needle-mcp",
@@ -1132,9 +1162,10 @@
         "name": "neondatabase-labs",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "mcp-remote",
@@ -1177,6 +1208,7 @@
   {
     "id": "a5caf174-b132-4997-87e3-5e6beac00fb1",
     "name": "io.github.riza-io/riza-mcp",
+    "description": "io.github.riza-io/riza-mcp",
     "license": "Apache-2.0",
     "repository": {
       "id": "riza-io/riza-mcp",
@@ -1188,9 +1220,10 @@
         "name": "riza-io",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "@riza-io/riza-mcp",
           "positional_arguments": [
             "@riza-io/riza-mcp"
           ]
@@ -1213,9 +1246,10 @@
         "name": "PaddleHQ",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@paddle/paddle-mcp"
@@ -1223,14 +1257,12 @@
           "named_arguments": [
             {
               "short_flag": "--api-key",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             },
             {
               "short_flag": "--environment",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             }
           ]
@@ -1253,9 +1285,10 @@
         "name": "ppl-ai",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "run",
           "positional_arguments": [
             "run",
             "-i",
@@ -1281,6 +1314,7 @@
   {
     "id": "12cf3a2a-f42b-4aea-9fbc-92062759a409",
     "name": "io.github.redis/mcp-redis-cloud",
+    "description": "io.github.redis/mcp-redis-cloud",
     "license": "Apache-2.0",
     "repository": {
       "id": "redis/mcp-redis-cloud",
@@ -1310,6 +1344,7 @@
   {
     "id": "227e036c-dab7-4dde-80a2-ae318a050cb2",
     "name": "io.github.mindscapehq/mcp-server-raygun",
+    "description": "io.github.mindscapehq/mcp-server-raygun",
     "license": "Apache-2.0",
     "repository": {
       "id": "MindscapeHQ/mcp-server-raygun",
@@ -1321,9 +1356,10 @@
         "name": "MindscapeHQ",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@raygun.io/mcp-server-raygun"
@@ -1335,6 +1371,7 @@
   {
     "id": "236102b9-25f2-422c-82a6-5dac59af2453",
     "name": "io.github.fatwang2/search1api-mcp",
+    "description": "io.github.fatwang2/search1api-mcp",
     "license": "Apache-2.0",
     "repository": {
       "id": "fatwang2/search1api-mcp",
@@ -1346,9 +1383,10 @@
         "name": "fatwang2",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "search1api-mcp"
@@ -1402,9 +1440,10 @@
         "name": "StarRocks",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "run",
           "positional_arguments": [
             "run",
             "--with",
@@ -1428,6 +1467,7 @@
   {
     "id": "68f55e0c-835a-4e62-9c14-2565accc0733",
     "name": "io.github.tavily-ai/tavily-mcp",
+    "description": "io.github.tavily-ai/tavily-mcp",
     "license": "Apache-2.0",
     "repository": {
       "id": "tavily-ai/tavily-mcp",
@@ -1439,9 +1479,10 @@
         "name": "tavily-ai",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "tavily-mcp@0.1.4"
@@ -1453,6 +1494,7 @@
   {
     "id": "1e4d71f4-ea5f-46e1-80f2-eed831e70f1a",
     "name": "io.github.thirdweb-dev/ai",
+    "description": "io.github.thirdweb-dev/ai",
     "license": "Apache-2.0",
     "repository": {
       "id": "thirdweb-dev/ai",
@@ -1462,6 +1504,7 @@
   {
     "id": "6b62abca-6486-4baa-bf6d-56b208ac1c94",
     "name": "io.github.tinybirdco/mcp-tinybird",
+    "description": "io.github.tinybirdco/mcp-tinybird",
     "license": "Apache-2.0",
     "repository": {
       "id": "tinybirdco/mcp-tinybird",
@@ -1471,6 +1514,7 @@
   {
     "id": "1013c705-cbc6-4361-9cae-4ad4770c721e",
     "name": "io.github.unifai-network/unifai-mcp-server",
+    "description": "io.github.unifai-network/unifai-mcp-server",
     "license": "Apache-2.0",
     "repository": {
       "id": "unifai-network/unifai-mcp-server",
@@ -1480,6 +1524,7 @@
   {
     "id": "6a6c5ef3-5ebf-4cc3-a61e-30ce1f5f351f",
     "name": "io.github.unstructured-io/uns-mcp",
+    "description": "io.github.unstructured-io/uns-mcp",
     "license": "Apache-2.0",
     "repository": {
       "id": "Unstructured-IO/UNS-MCP",
@@ -1501,9 +1546,10 @@
         "name": "vectorize-io",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@vectorize-io/vectorize-mcp-server@latest"
@@ -1525,6 +1571,7 @@
   {
     "id": "d5d4508e-5c4d-494c-a587-20abb4db53ab",
     "name": "io.github.veyrax/veyrax-mcp",
+    "description": "io.github.veyrax/veyrax-mcp",
     "license": "Apache-2.0",
     "repository": {
       "id": "VeyraX/veyrax-mcp",
@@ -1546,9 +1593,10 @@
         "name": "XeroAPI",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@xeroapi/xero-mcp-server@latest"
@@ -1580,6 +1628,7 @@
   {
     "id": "0d3259d8-de6c-4395-964b-3578923ffb04",
     "name": "io.github.openbnb-org/mcp-server-airbnb",
+    "description": "io.github.openbnb-org/mcp-server-airbnb",
     "license": "Apache-2.0",
     "repository": {
       "id": "openbnb-org/mcp-server-airbnb",
@@ -1591,9 +1640,10 @@
         "name": "openbnb-org",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@openbnb/mcp-server-airbnb"
@@ -1617,9 +1667,10 @@
         "name": "baryhuang",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "run",
           "positional_arguments": [
             "run",
             "-i",
@@ -1632,20 +1683,17 @@
           "named_arguments": [
             {
               "short_flag": "AWS_ACCESS_KEY_ID",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             },
             {
               "short_flag": "AWS_SECRET_ACCESS_KEY",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             },
             {
               "short_flag": "AWS_DEFAULT_REGION",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             }
           ]
@@ -1668,9 +1716,10 @@
         "name": "AI-Agent-Hub",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "--directory",
           "positional_arguments": [
             "--directory",
             "/ABSOLUTE/PATH/TO/PARENT/FOLDER/ai-agent-marketplace-index-mcp/src/ai-agent-marketplace-index",
@@ -1694,6 +1743,7 @@
   {
     "id": "309bab4b-c96e-4a4f-97bd-db7c54f77d9e",
     "name": "io.github.yangkyeongmo/mcp-server-apache-airflow",
+    "description": "io.github.yangkyeongmo/mcp-server-apache-airflow",
     "license": "Apache-2.0",
     "repository": {
       "id": "yangkyeongmo/mcp-server-apache-airflow",
@@ -1715,9 +1765,10 @@
         "name": "domdomegg",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.940Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "airtable-mcp-server"
@@ -1741,9 +1792,10 @@
         "name": "felores",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "@felores/airtable-mcp-server",
           "positional_arguments": [
             "@felores/airtable-mcp-server"
           ]
@@ -1784,6 +1836,7 @@
   {
     "id": "7bab4380-7758-44a0-893e-7a28fd16dbd8",
     "name": "io.github.pyroprompts/any-chat-completions-mcp",
+    "description": "io.github.pyroprompts/any-chat-completions-mcp",
     "license": "Apache-2.0",
     "repository": {
       "id": "pyroprompts/any-chat-completions-mcp",
@@ -1805,9 +1858,10 @@
         "name": "Omar-V2",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "--directory",
           "positional_arguments": [
             "--directory",
             "/ABSOLUTE/PATH/TO/PARENT/FOLDER/mcp-ical",
@@ -1853,9 +1907,10 @@
         "name": "sooperset",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "run",
           "positional_arguments": [
             "run",
             "-i",
@@ -1923,9 +1978,10 @@
         "name": "aarora79",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "run",
           "positional_arguments": [
             "run",
             "-i",
@@ -1951,6 +2007,7 @@
   {
     "id": "00f7b14c-c1b1-49be-be8c-d6bc8606302a",
     "name": "io.github.whataboutyou-ai/eunomia-mcp-server",
+    "description": "io.github.whataboutyou-ai/eunomia-mcp-server",
     "license": "Apache-2.0",
     "repository": {
       "id": "whataboutyou-ai/eunomia-mcp-server",
@@ -1960,6 +2017,7 @@
   {
     "id": "189768c0-85a6-409e-9e48-7cca732153cf",
     "name": "io.github.aws-samples/sample-mcp-server-s3",
+    "description": "io.github.aws-samples/sample-mcp-server-s3",
     "license": "Apache-2.0",
     "repository": {
       "id": "aws-samples/sample-mcp-server-s3",
@@ -1971,9 +2029,10 @@
         "name": "aws-samples",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "--directory",
           "positional_arguments": [
             "--directory",
             "/Users/user/generative_ai/model_context_protocol/s3-mcp-server",
@@ -1999,9 +2058,10 @@
         "name": "pab1it0",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "--directory",
           "positional_arguments": [
             "--directory",
             "<full path to adx-mcp-server directory>",
@@ -2047,9 +2107,10 @@
         "name": "magnetai",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@magnetai/free-usdc-transfer"
@@ -2103,9 +2164,10 @@
         "name": "ergut",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@ergut/mcp-bigquery-server",
@@ -2141,6 +2203,7 @@
   {
     "id": "168fb1bf-9cc4-4e06-bb5b-66299a19bbaf",
     "name": "io.github.ahujasid/blender-mcp",
+    "description": "io.github.ahujasid/blender-mcp",
     "license": "Apache-2.0",
     "repository": {
       "id": "ahujasid/blender-mcp",
@@ -2160,6 +2223,7 @@
   {
     "id": "6f133030-a5c7-4a8e-9b69-55af571a57ea",
     "name": "io.github.termix-official/bsc-mcp",
+    "description": "io.github.termix-official/bsc-mcp",
     "license": "Apache-2.0",
     "repository": {
       "id": "TermiX-official/bsc-mcp",
@@ -2191,9 +2255,10 @@
         "name": "lenwood",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "--directory",
           "positional_arguments": [
             "--directory",
             "/full/path/to/cfbd-mcp-server",
@@ -2207,6 +2272,7 @@
   {
     "id": "4d142c08-4e50-4ab0-afd8-2192c2b69088",
     "name": "io.github.reading-plus-ai/mcp-server-data-exploration",
+    "description": "io.github.reading-plus-ai/mcp-server-data-exploration",
     "license": "Apache-2.0",
     "repository": {
       "id": "reading-plus-ai/mcp-server-data-exploration",
@@ -2248,9 +2314,10 @@
         "name": "pab1it0",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "run",
           "positional_arguments": [
             "run",
             "--rm",
@@ -2276,9 +2343,10 @@
         "name": "privetin",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "--directory",
           "positional_arguments": [
             "--directory",
             "C:/MCP/server/community/chroma",
@@ -2314,9 +2382,10 @@
         "name": "felores",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "@felores/cloudinary-mcp-server@latest",
           "positional_arguments": [
             "@felores/cloudinary-mcp-server@latest"
           ]
@@ -2379,9 +2448,10 @@
         "name": "ivo-toby",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@ivotoby/contentful-management-mcp-server"
@@ -2445,9 +2515,10 @@
         "name": "GeLi2001",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "datadog-mcp-server",
           "positional_arguments": [
             "datadog-mcp-server",
             "--apiKey",
@@ -2476,9 +2547,10 @@
         "name": "privetin",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "run",
           "positional_arguments": [
             "run",
             "dataset-viewer"
@@ -2512,9 +2584,10 @@
         "name": "DMontgomery40",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "deepseek-mcp-server"
@@ -2548,9 +2621,10 @@
         "name": "ruixingshi",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "deepseek-thinker-mcp"
@@ -2562,6 +2636,7 @@
   {
     "id": "5d56e5de-0fe3-429d-8fe5-902ea26d3b2b",
     "name": "io.github.descope-sample-apps/descope-mcp-server",
+    "description": "io.github.descope-sample-apps/descope-mcp-server",
     "license": "Apache-2.0",
     "repository": {
       "id": "descope-sample-apps/descope-mcp-server-stdio",
@@ -2571,6 +2646,7 @@
   {
     "id": "0a73e41b-5c14-4e7a-ad10-2059ab30bc87",
     "name": "io.github.kpsunil97/devrev-mcp-server",
+    "description": "io.github.kpsunil97/devrev-mcp-server",
     "license": "Apache-2.0",
     "repository": {
       "id": "kpsunil97/devrev-mcp-server",
@@ -2620,6 +2696,7 @@
   {
     "id": "8095d8be-4d61-4652-b868-e1d6cf48c474",
     "name": "io.github.ashdevfr/discourse-mcp-server",
+    "description": "io.github.ashdevfr/discourse-mcp-server",
     "license": "Apache-2.0",
     "repository": {
       "id": "AshDevFr/discourse-mcp-server",
@@ -2631,9 +2708,10 @@
         "name": "AshDevFr",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "run",
           "positional_arguments": [
             "run",
             "-i",
@@ -2646,20 +2724,17 @@
           "named_arguments": [
             {
               "short_flag": "DISCOURSE_API_URL",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             },
             {
               "short_flag": "DISCOURSE_API_KEY",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             },
             {
               "short_flag": "DISCOURSE_API_USERNAME",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             }
           ]
@@ -2712,9 +2787,10 @@
         "name": "TencentEdgeOne",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "edgeone-pages-mcp",
           "positional_arguments": [
             "edgeone-pages-mcp"
           ]
@@ -2735,6 +2811,7 @@
   {
     "id": "ef3d94f1-0324-4ccb-9a9c-44460445b7e2",
     "name": "io.github.mamertofabian/elevenlabs-mcp-server",
+    "description": "io.github.mamertofabian/elevenlabs-mcp-server",
     "license": "Apache-2.0",
     "repository": {
       "id": "mamertofabian/elevenlabs-mcp-server",
@@ -2756,9 +2833,10 @@
         "name": "mcpdotdirect",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@mcpdotdirect/evm-mcp-server",
@@ -2773,6 +2851,7 @@
   {
     "id": "ff3c61ab-33b8-4b93-8d26-4fb4507b023b",
     "name": "io.github.mamertofabian/mcp-everything-search",
+    "description": "io.github.mamertofabian/mcp-everything-search",
     "license": "Apache-2.0",
     "repository": {
       "id": "mamertofabian/mcp-everything-search",
@@ -2802,6 +2881,7 @@
   {
     "id": "251d11a3-394d-40bf-b9a0-0b001b7e9278",
     "name": "io.github.fastnai/mcp-fastn",
+    "description": "io.github.fastnai/mcp-fastn",
     "license": "Apache-2.0",
     "repository": {
       "id": "fastnai/mcp-fastn",
@@ -2833,9 +2913,10 @@
         "name": "GLips",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "figma-developer-mcp",
@@ -2844,8 +2925,7 @@
           "named_arguments": [
             {
               "short_flag": "--figma-api-key",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             }
           ]
@@ -2878,9 +2958,10 @@
         "name": "mendableai",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "firecrawl-mcp"
@@ -2914,9 +2995,10 @@
         "name": "MFYDev",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@fanyangmeng/ghost-mcp"
@@ -2938,6 +3020,7 @@
   {
     "id": "ffb0ae8b-ae2c-43ca-9a3d-300191c66723",
     "name": "io.github.longyi1207/glean-mcp-server",
+    "description": "io.github.longyi1207/glean-mcp-server",
     "license": "Apache-2.0",
     "repository": {
       "id": "longyi1207/glean-mcp-server",
@@ -2959,9 +3042,10 @@
         "name": "GongRzhe",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "@gongrzhe/server-gmail-autoauth-mcp",
           "positional_arguments": [
             "@gongrzhe/server-gmail-autoauth-mcp"
           ]
@@ -2984,9 +3068,10 @@
         "name": "baryhuang",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.769Z"
         },
         "command": {
+          "name": "run",
           "positional_arguments": [
             "run",
             "-i",
@@ -3000,6 +3085,7 @@
   {
     "id": "e6a9ee3c-f676-42ba-9abb-1c7e1e14dfe6",
     "name": "io.github.hichana/goalstory-mcp",
+    "description": "io.github.hichana/goalstory-mcp",
     "license": "Apache-2.0",
     "repository": {
       "id": "hichana/goalstory-mcp",
@@ -3049,6 +3135,7 @@
   {
     "id": "6d968f18-439d-44ef-89b6-6de24125f0c7",
     "name": "io.github.v-3/google-calendar",
+    "description": "io.github.v-3/google-calendar",
     "license": "Apache-2.0",
     "repository": {
       "id": "v-3/google-calendar",
@@ -3068,6 +3155,7 @@
   {
     "id": "05f943ae-3b86-4ad7-8cc3-08d97e460919",
     "name": "io.github.adenot/mcp-google-search",
+    "description": "io.github.adenot/mcp-google-search",
     "license": "Apache-2.0",
     "repository": {
       "id": "adenot/mcp-google-search",
@@ -3079,9 +3167,10 @@
         "name": "adenot",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@adenot/mcp-google-search"
@@ -3115,9 +3204,10 @@
         "name": "hannesj",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "mcp-graphql-schema",
@@ -3142,9 +3232,10 @@
         "name": "horizondatawave",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "@horizondatawave/mcp",
           "positional_arguments": [
             "@horizondatawave/mcp"
           ]
@@ -3155,6 +3246,7 @@
   {
     "id": "bf346c68-96e1-4b22-bacf-55a88f491d08",
     "name": "io.github.heurist-network/heurist-mesh-mcp-server",
+    "description": "io.github.heurist-network/heurist-mesh-mcp-server",
     "license": "Apache-2.0",
     "repository": {
       "id": "heurist-network/heurist-mesh-mcp-server",
@@ -3164,6 +3256,7 @@
   {
     "id": "0da0b386-ed52-4810-9eec-e28aa9b776e6",
     "name": "io.github.heurist-network/heurist-agent-framework",
+    "description": "io.github.heurist-network/heurist-agent-framework",
     "license": "Apache-2.0",
     "repository": {
       "id": "heurist-network/heurist-agent-framework",
@@ -3205,9 +3298,10 @@
         "name": "voska",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "run",
           "positional_arguments": [
             "run",
             "-i",
@@ -3257,9 +3351,10 @@
         "name": "mektigboy",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@mektigboy/server-hyperliquid"
@@ -3293,9 +3388,10 @@
         "name": "GongRzhe",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "@gongrzhe/image-gen-server",
           "positional_arguments": [
             "@gongrzhe/image-gen-server"
           ]
@@ -3318,9 +3414,10 @@
         "name": "idoru",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "influxdb-mcp-server",
           "positional_arguments": [
             "influxdb-mcp-server"
           ]
@@ -3343,9 +3440,10 @@
         "name": "sergehuber",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "@inoyu/mcp-unomi-server",
           "positional_arguments": [
             "@inoyu/mcp-unomi-server"
           ]
@@ -3356,6 +3454,7 @@
   {
     "id": "620a0c53-cc4d-4396-9f10-8859600e992d",
     "name": "io.github.raoulbia-ai/mcp-server-for-intercom",
+    "description": "io.github.raoulbia-ai/mcp-server-for-intercom",
     "license": "Apache-2.0",
     "repository": {
       "id": "raoulbia-ai/mcp-server-for-intercom",
@@ -3387,9 +3486,10 @@
         "name": "ferrislucas",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "iterm-mcp"
@@ -3443,9 +3543,10 @@
         "name": "ChristophEnglisch",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "keycloak-model-context-protocol"
@@ -3469,9 +3570,10 @@
         "name": "kiwamizamurai",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@kiwamizamurai/mcp-kibela-server"
@@ -3515,9 +3617,10 @@
         "name": "Flux159",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "mcp-server-kubernetes",
           "positional_arguments": [
             "mcp-server-kubernetes"
           ]
@@ -3570,9 +3673,10 @@
         "name": "jerhadf",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "linear-mcp-server"
@@ -3616,9 +3720,10 @@
         "name": "run-llama",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@llamaindex/mcp-server-llamacloud",
@@ -3668,6 +3773,7 @@
   {
     "id": "92b66c28-be49-461f-9592-c8bd5ce2710a",
     "name": "io.github.maton-ai/agent-toolkit",
+    "description": "io.github.maton-ai/agent-toolkit",
     "license": "Apache-2.0",
     "repository": {
       "id": "maton-ai/agent-toolkit",
@@ -3687,6 +3793,7 @@
   {
     "id": "29c39a53-eaef-4194-acb5-6a62d186230a",
     "name": "io.github.tesla0225/mcp-create",
+    "description": "io.github.tesla0225/mcp-create",
     "license": "Apache-2.0",
     "repository": {
       "id": "tesla0225/mcp-create",
@@ -3698,9 +3805,10 @@
         "name": "tesla0225",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "run",
           "positional_arguments": [
             "run",
             "-i",
@@ -3754,6 +3862,7 @@
   {
     "id": "239909a9-368c-4c01-a72d-fd5c4b71c634",
     "name": "io.github.mem0ai/mem0-mcp",
+    "description": "io.github.mem0ai/mem0-mcp",
     "license": "Apache-2.0",
     "repository": {
       "id": "mem0ai/mem0-mcp",
@@ -3775,9 +3884,10 @@
         "name": "unibaseio",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "--directory",
           "positional_arguments": [
             "--directory",
             "path/to/membase-mcp",
@@ -3813,9 +3923,10 @@
         "name": "JexinSam",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "--directory",
           "positional_arguments": [
             "--directory",
             "path/to/mssql_mcp_server",
@@ -3901,9 +4012,10 @@
         "name": "mobile-next",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@mobilenext/mobile-mcp@latest"
@@ -3927,9 +4039,10 @@
         "name": "kiliczsh",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "mcp-mongo-server"
@@ -3983,9 +4096,10 @@
         "name": "benborla",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "mcprunner",
           "positional_arguments": [
             "mcprunner",
             "--",
@@ -3996,50 +4110,42 @@
           "named_arguments": [
             {
               "short_flag": "MYSQL_HOST",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             },
             {
               "short_flag": "MYSQL_PORT",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             },
             {
               "short_flag": "MYSQL_USER",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             },
             {
               "short_flag": "MYSQL_PASS",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             },
             {
               "short_flag": "MYSQL_DB",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             },
             {
               "short_flag": "ALLOW_INSERT_OPERATION",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             },
             {
               "short_flag": "ALLOW_UPDATE_OPERATION",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             },
             {
               "short_flag": "ALLOW_DELETE_OPERATION",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             }
           ]
@@ -4062,9 +4168,10 @@
         "name": "designcomputer",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "--directory",
           "positional_arguments": [
             "--directory",
             "path/to/mysql_mcp_server",
@@ -4100,9 +4207,10 @@
         "name": "ProgramComputer",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@programcomputer/nasa-mcp-server@latest"
@@ -4124,6 +4232,7 @@
   {
     "id": "75952d46-72a2-4c7c-92fb-e38f0aa87248",
     "name": "io.github.kyrietangsheng/mcp-server-nationalparks",
+    "description": "io.github.kyrietangsheng/mcp-server-nationalparks",
     "license": "Apache-2.0",
     "repository": {
       "id": "KyrieTangSheng/mcp-server-nationalparks",
@@ -4135,9 +4244,10 @@
         "name": "KyrieTangSheng",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "mcp-server-nationalparks"
@@ -4171,9 +4281,10 @@
         "name": "r-huijts",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "ns-mcp-server"
@@ -4197,9 +4308,10 @@
         "name": "da-okazaki",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "@alanse/mcp-neo4j-server",
           "positional_arguments": [
             "@alanse/mcp-neo4j-server"
           ]
@@ -4222,9 +4334,10 @@
         "name": "bigcodegen",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "mcp-neovim-server"
@@ -4236,6 +4349,7 @@
   {
     "id": "c5d8528c-cbf4-4ce3-8011-3b4f79a0cc30",
     "name": "io.github.suekou/mcp-notion-server",
+    "description": "io.github.suekou/mcp-notion-server",
     "license": "Apache-2.0",
     "repository": {
       "id": "suekou/mcp-notion-server",
@@ -4247,9 +4361,10 @@
         "name": "suekou",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@suekou/mcp-notion-server"
@@ -4261,6 +4376,7 @@
   {
     "id": "e4a5b44f-6908-41cc-9510-c920709ca8ec",
     "name": "io.github.v-3/notion-server",
+    "description": "io.github.v-3/notion-server",
     "license": "Apache-2.0",
     "repository": {
       "id": "v-3/notion-server",
@@ -4270,6 +4386,7 @@
   {
     "id": "8b7b4a39-f0d2-4ba3-ad41-f146ebb6b72f",
     "name": "io.github.teddyzxcv/ntfy-mcp",
+    "description": "io.github.teddyzxcv/ntfy-mcp",
     "license": "Apache-2.0",
     "repository": {
       "id": "teddyzxcv/ntfy-mcp",
@@ -4301,9 +4418,10 @@
         "name": "StevenStavrakis",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "obsidian-mcp",
@@ -4329,9 +4447,10 @@
         "name": "yuanoOo",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "--directory",
           "positional_arguments": [
             "--directory",
             "path/to/oceanbase_mcp_server",
@@ -4397,9 +4516,10 @@
         "name": "baryhuang",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "run",
           "positional_arguments": [
             "run",
             "-i",
@@ -4419,38 +4539,32 @@
           "named_arguments": [
             {
               "short_flag": "OPENAPI_JSON_DOCS_URL",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             },
             {
               "short_flag": "MCP_API_PREFIX",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             },
             {
               "short_flag": "GLOBAL_TOOL_PROMPT",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             },
             {
               "short_flag": "OPENAPI_JSON_DOCS_URL",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             },
             {
               "short_flag": "MCP_API_PREFIX",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             },
             {
               "short_flag": "GLOBAL_TOOL_PROMPT",
-              "requires_value": true,
-              "is_required": true,
+              "required": true,
               "description": "Named argument"
             }
           ]
@@ -4483,9 +4597,10 @@
         "name": "hannesj",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "mcp-openapi-schema",
@@ -4498,6 +4613,7 @@
   {
     "id": "b32a0e35-5829-43b5-a000-5114cd3075cf",
     "name": "io.github.spathodea-network/opencti-mcp",
+    "description": "io.github.spathodea-network/opencti-mcp",
     "license": "Apache-2.0",
     "repository": {
       "id": "Spathodea-Network/opencti-mcp",
@@ -4507,6 +4623,7 @@
   {
     "id": "d56adfb0-ca4c-429c-90ea-fae4981718fe",
     "name": "io.github.asusevski/opendota-mcp-server",
+    "description": "io.github.asusevski/opendota-mcp-server",
     "license": "Apache-2.0",
     "repository": {
       "id": "asusevski/opendota-mcp-server",
@@ -4528,9 +4645,10 @@
         "name": "shanejonas",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "openrpc-mcp-server"
@@ -4594,9 +4712,10 @@
         "name": "felores",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "@felores/placid-mcp-server",
           "positional_arguments": [
             "@felores/placid-mcp-server"
           ]
@@ -4619,9 +4738,10 @@
         "name": "executeautomation",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@executeautomation/playwright-mcp-server"
@@ -4655,9 +4775,10 @@
         "name": "kenjihikmatullah",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "productboard-mcp"
@@ -4681,9 +4802,10 @@
         "name": "pab1it0",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "--directory",
           "positional_arguments": [
             "--directory",
             "<full path to prometheus-mcp-server directory>",
@@ -4697,6 +4819,7 @@
   {
     "id": "cc037ee4-822b-46c9-ada8-8667ea6724fe",
     "name": "io.github.dogukanakkaya/pulumi-mcp-server",
+    "description": "io.github.dogukanakkaya/pulumi-mcp-server",
     "license": "Apache-2.0",
     "repository": {
       "id": "dogukanakkaya/pulumi-mcp-server",
@@ -4718,9 +4841,10 @@
         "name": "AshikNesin",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "pushover-mcp@latest",
@@ -4749,9 +4873,10 @@
         "name": "jjsantos01",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "--directory",
           "positional_arguments": [
             "--directory",
             "/ABSOLUTE/PATH/TO/PARENT/REPO/FOLDER/qgis_mcp/src/qgis_mcp",
@@ -4827,9 +4952,10 @@
         "name": "GongRzhe",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "@gongrzhe/server-redis-mcp@1.0.0",
           "positional_arguments": [
             "@gongrzhe/server-redis-mcp@1.0.0",
             "redis://localhost:6379"
@@ -4883,9 +5009,10 @@
         "name": "r-huijts",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "mcp-server-rijksmuseum"
@@ -4949,9 +5076,10 @@
         "name": "ihor-sokoliuk",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "mcp-searxng"
@@ -4995,9 +5123,10 @@
         "name": "GeLi2001",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "shopify-mcp",
           "positional_arguments": [
             "shopify-mcp",
             "--accessToken",
@@ -5024,9 +5153,10 @@
         "name": "dvcrn",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "mcp-server-siri-shortcuts",
           "positional_arguments": [
             "mcp-server-siri-shortcuts"
           ]
@@ -5037,6 +5167,7 @@
   {
     "id": "102ad7fa-735c-4938-858b-29feac41be42",
     "name": "io.github.isaacwasserman/mcp-snowflake-server",
+    "description": "io.github.isaacwasserman/mcp-snowflake-server",
     "license": "Apache-2.0",
     "repository": {
       "id": "isaacwasserman/mcp-snowflake-server",
@@ -5086,6 +5217,7 @@
   {
     "id": "2ce753f5-badb-4ba4-b999-c191629fc5c0",
     "name": "io.github.atharvagupta2003/mcp-stripe",
+    "description": "io.github.atharvagupta2003/mcp-stripe",
     "license": "Apache-2.0",
     "repository": {
       "id": "atharvagupta2003/mcp-stripe",
@@ -5095,6 +5227,7 @@
   {
     "id": "8f942a32-3462-446d-a4eb-87b0b51e02f5",
     "name": "io.github.wilsonchenghy/shadertoy-mcp",
+    "description": "io.github.wilsonchenghy/shadertoy-mcp",
     "license": "Apache-2.0",
     "repository": {
       "id": "wilsonchenghy/ShaderToy-MCP",
@@ -5124,6 +5257,7 @@
   {
     "id": "3b439eb7-78d5-4012-b6c4-fb60f47d47db",
     "name": "io.github.chigwell/telegram-mcp",
+    "description": "io.github.chigwell/telegram-mcp",
     "license": "Apache-2.0",
     "repository": {
       "id": "chigwell/telegram-mcp",
@@ -5135,9 +5269,10 @@
         "name": "chigwell",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "--directory",
           "positional_arguments": [
             "--directory",
             "/full/path/to/telegram-mcp-server",
@@ -5163,9 +5298,10 @@
         "name": "chaindead",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@chaindead/telegram-mcp"
@@ -5187,6 +5323,7 @@
   {
     "id": "97233b40-5b5b-4fcd-beb6-4604782c3785",
     "name": "io.github.geli2001/tft-mcp-server",
+    "description": "io.github.geli2001/tft-mcp-server",
     "license": "Apache-2.0",
     "repository": {
       "id": "GeLi2001/tft-mcp-server",
@@ -5198,9 +5335,10 @@
         "name": "GeLi2001",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.941Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "mcp-server-tft",
           "positional_arguments": [
             "mcp-server-tft",
             "--apiKey",
@@ -5229,9 +5367,10 @@
         "name": "delorenj",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.942Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@delorenj/mcp-server-ticketmaster"
@@ -5255,9 +5394,10 @@
         "name": "alexarevalo9",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.942Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@alexarevalo.ai/mcp-server-ticktick"
@@ -5281,9 +5421,10 @@
         "name": "abhiz123",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.942Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@abhiz123/todoist-mcp-server"
@@ -5295,6 +5436,7 @@
   {
     "id": "68a2a023-135c-43eb-abba-df01d338209a",
     "name": "io.github.suhail-ak-s/mcp-typesense-server",
+    "description": "io.github.suhail-ak-s/mcp-typesense-server",
     "license": "Apache-2.0",
     "repository": {
       "id": "suhail-ak-s/mcp-typesense-server",
@@ -5306,9 +5448,10 @@
         "name": "suhail-ak-s",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.942Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "typesense-mcp-server",
@@ -5328,6 +5471,7 @@
   {
     "id": "0e086417-1066-456f-8e47-d3eeae2ccf23",
     "name": "io.github.gongrzhe/travel-planner-mcp-server",
+    "description": "io.github.gongrzhe/travel-planner-mcp-server",
     "license": "Apache-2.0",
     "repository": {
       "id": "GongRzhe/TRAVEL-PLANNER-MCP-Server",
@@ -5339,9 +5483,10 @@
         "name": "GongRzhe",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.942Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "@gongrzhe/server-travelplanner-mcp",
           "positional_arguments": [
             "@gongrzhe/server-travelplanner-mcp"
           ]
@@ -5364,9 +5509,10 @@
         "name": "ognis1205",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.942Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "--directory",
           "positional_arguments": [
             "--directory",
             "/<path to your local git repository>/mcp-server-unitycatalog",
@@ -5406,6 +5552,7 @@
   {
     "id": "781716f0-1165-4ee0-8d4f-62cf32316846",
     "name": "io.github.isaacwasserman/mcp-vegalite-server",
+    "description": "io.github.isaacwasserman/mcp-vegalite-server",
     "license": "Apache-2.0",
     "repository": {
       "id": "isaacwasserman/mcp-vegalite-server",
@@ -5437,9 +5584,10 @@
         "name": "mfukushim",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.942Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@mfukushim/map-traveler-mcp"
@@ -5451,6 +5599,7 @@
   {
     "id": "c6c3708e-16c4-4208-89c4-9bd27c34115e",
     "name": "io.github.dinghuazhou/sample-mcp-server-tos",
+    "description": "io.github.dinghuazhou/sample-mcp-server-tos",
     "license": "Apache-2.0",
     "repository": {
       "id": "dinghuazhou/sample-mcp-server-tos",
@@ -5462,9 +5611,10 @@
         "name": "dinghuazhou",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.942Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "--directory",
           "positional_arguments": [
             "--directory",
             "/ABSOLUTE/PATH/TO/PARENT/FOLDER/src/mcp_server_tos",
@@ -5520,9 +5670,10 @@
         "name": "bharathvaj-ganesan",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.942Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@bharathvaj/whois-mcp@latest"
@@ -5566,9 +5717,10 @@
         "name": "SimonB97",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.942Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@simonb97/server-win-cli"
@@ -5592,9 +5744,10 @@
         "name": "ZubeidHendricks",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.942Z"
+          "release_date": "2025-05-08T11:05:08.770Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@modelcontextprotocol/server-youtube"
@@ -5618,9 +5771,10 @@
         "name": "anshumax",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.942Z"
+          "release_date": "2025-05-08T11:05:08.771Z"
         },
         "command": {
+          "name": "--directory",
           "positional_arguments": [
             "--directory",
             "path/to/world_bank_mcp_server",
@@ -5646,9 +5800,10 @@
         "name": "EnesCinr",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.942Z"
+          "release_date": "2025-05-08T11:05:08.771Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "@enescinar/twitter-mcp"
@@ -5660,6 +5815,7 @@
   {
     "id": "33eb174b-1f8e-4e99-acab-b59963ee2072",
     "name": "io.github.vidhupv/x-mcp",
+    "description": "io.github.vidhupv/x-mcp",
     "license": "Apache-2.0",
     "repository": {
       "id": "vidhupv/x-mcp",
@@ -5671,9 +5827,10 @@
         "name": "vidhupv",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.942Z"
+          "release_date": "2025-05-08T11:05:08.771Z"
         },
         "command": {
+          "name": "--directory",
           "positional_arguments": [
             "--directory",
             "/path/to/x-mcp",
@@ -5709,9 +5866,10 @@
         "name": "john-zhang-dev",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.942Z"
+          "release_date": "2025-05-08T11:05:08.771Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "xero-mcp@latest"
@@ -5733,6 +5891,7 @@
   {
     "id": "63ef669e-1249-4ad5-8ac0-21334c44118d",
     "name": "io.github.apeyroux/mcp-xmind",
+    "description": "io.github.apeyroux/mcp-xmind",
     "license": "Apache-2.0",
     "repository": {
       "id": "apeyroux/mcp-xmind",
@@ -5752,6 +5911,7 @@
   {
     "id": "fab02df8-db99-4b1f-8cdc-4b10de31f477",
     "name": "io.github.isdaniel/mcp_weather_server",
+    "description": "io.github.isdaniel/mcp_weather_server",
     "license": "Apache-2.0",
     "repository": {
       "id": "isdaniel/mcp_weather_server",
@@ -5793,9 +5953,10 @@
         "name": "punkpeye",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.942Z"
+          "release_date": "2025-05-08T11:05:08.771Z"
         },
         "command": {
+          "name": "tsx",
           "positional_arguments": [
             "tsx",
             "/PATH/TO/YOUR_PROJECT/src/index.ts"
@@ -5909,9 +6070,10 @@
         "name": "mcp-router",
         "version": {
           "number": "latest",
-          "release_date": "2025-05-08T09:32:47.942Z"
+          "release_date": "2025-05-08T11:05:08.771Z"
         },
         "command": {
+          "name": "-y",
           "positional_arguments": [
             "-y",
             "mcpr-cli",
