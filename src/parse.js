@@ -11,10 +11,36 @@ const outPath = path.join(entriesDir, `${today}.json`);
 const seed = JSON.parse(fs.readFileSync(seedPath, 'utf-8'));
 
 // Helper para converter para schema v1
+// Remove campos nulos, undefined ou string vazia
+function removeEmptyFields(obj) {
+    if (Array.isArray(obj)) {
+        return obj
+            .map(removeEmptyFields)
+            .filter(v => v !== undefined && v !== null && (typeof v !== 'string' || v.trim() !== ''));
+    } else if (obj && typeof obj === 'object') {
+        return Object.entries(obj)
+            .reduce((acc, [key, value]) => {
+                const cleaned = removeEmptyFields(value);
+                if (
+                    cleaned !== undefined &&
+                    cleaned !== null &&
+                    (typeof cleaned !== 'string' || cleaned.trim() !== '') &&
+                    // também remover arrays vazios e objetos vazios
+                    (!(Array.isArray(cleaned)) || cleaned.length > 0) &&
+                    (!(typeof cleaned === 'object' && !Array.isArray(cleaned)) || Object.keys(cleaned).length > 0)
+                ) {
+                    acc[key] = cleaned;
+                }
+                return acc;
+            }, {});
+    }
+    return obj;
+}
+
 function convertToV1(entry) {
     // O schema exige: id, name, description, repository (id, url), score, verified, license, packages, remotes
     // Adaptar os campos do seed.json conforme necessário
-    return {
+    return removeEmptyFields({
         id: entry.id,
         name: entry.name,
         description: entry.description || '',
@@ -62,7 +88,7 @@ function convertToV1(entry) {
                 url: remote.url || '',
             }))
             : [],
-    };
+    });
 }
 
 // Cria a pasta de saída se não existir
@@ -73,7 +99,6 @@ if (!fs.existsSync(entriesDir)) {
 // Converte todos os servers
 const v1Entries = seed.map(convertToV1);
 
-// Salva o arquivo
+// Escreve o arquivo de saída
 fs.writeFileSync(outPath, JSON.stringify(v1Entries, null, 2), 'utf-8');
-
-console.log(`Arquivo salvo em ${outPath} com ${v1Entries.length} servidores.`);
+console.log(`Arquivo salvo em: ${outPath} com ${v1Entries.length} servidores.`);
