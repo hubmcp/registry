@@ -11,7 +11,7 @@ Want to add a new MCP package to the index? Follow these steps:
 
 ### 1. Create your entry
 - Create a new JSON file in `entries/`.
-- The filename must be unique (e.g., `2025-05-08T08:42:27.945Z.json`) and must be in the format `YYYY-MM-DDTHH:MM:SS.SSSZ.json`.
+- The filename must be unique in format `YYYY-MM-DDTHH:MM:SS.SSSZ.json` (e.g., `2025-05-08T08:42:27.945Z.json`).
 - Fill in the content according to the schema in `schema/metadata.schema.json`.
 
 ### 2. Validate your entry
