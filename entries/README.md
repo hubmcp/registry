@@ -4,6 +4,12 @@ Place each MCP registry entry as a JSON file in this folder.
 Each file must follow the schema in `schema/metadata.schema.json`.
 
 
+## Examples
+
+### Standard Input/Output (stdio)
+
+The [stdio](https://modelcontextprotocol.io/docs/concepts/transports#standard-input%2Foutput-stdio) transport enables communication through standard input and output streams. This is particularly useful for local integrations and command-line tools.
+
 ```json
 [
     {
@@ -30,8 +36,7 @@ Each file must follow the schema in `schema/metadata.schema.json`.
                     "named_arguments": [
                         {
                             "short_flag": "-y",
-                            "requires_value": false,
-                            "is_required": false,
+                            "required": false,
                             "description": "Skip prompts"
                         }
                     ]
@@ -46,7 +51,16 @@ Each file must follow the schema in `schema/metadata.schema.json`.
                 ]
             }
         ]
-    },
+    }
+]
+```
+
+### Server-Sent Events (SSE)
+
+The [SSE](https://modelcontextprotocol.io/docs/concepts/transports#server-sent-events-sse) transport enables server-to-client streaming with HTTP POST requests for client-to-server communication.
+
+```json
+[
     {
         "id": "87efdf29-e0f1-4f4d-a5e1-ecbe9a9ca73b",
         "name": "example-mcp",
