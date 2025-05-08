@@ -13,11 +13,9 @@ The [stdio](https://modelcontextprotocol.io/docs/concepts/transports#standard-in
 ```json
 [
     {
-        "id": "87efdf29-e0f1-4f4d-a5e1-ecbe9a9ca73b",
         "name": "example-mcp",
         "description": "An example MCP package for testing",
         "repository": {
-            "id": "b94b5f7e-c7c6-d760-2c78-a5e9b8a5b8c9",
             "url": "https://github.com/registrymcp/example-mcp"
         },
         "packages": [
@@ -62,11 +60,9 @@ The [SSE](https://modelcontextprotocol.io/docs/concepts/transports#server-sent-e
 ```json
 [
     {
-        "id": "87efdf29-e0f1-4f4d-a5e1-ecbe9a9ca73b",
         "name": "example-mcp",
         "description": "An example MCP package for testing",
         "repository": {
-            "id": "b94b5f7e-c7c6-d760-2c78-a5e9b8a5b8c9",
             "url": "https://github.com/registrymcp/example-mcp"
         },
         "remotes": [
