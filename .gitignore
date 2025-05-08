@@ -140,7 +140,3 @@ out
 .pnp.*
 .DS_Store
 bun.lock
-
-# dist
-dist
-!dist/.gitkeep
