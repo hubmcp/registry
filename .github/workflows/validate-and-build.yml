@@ -85,3 +85,4 @@ jobs:
           commit_message: 'chore: update dist'
           branch: gh-pages
           file_pattern: dist/*
+          add_options: '-f'
