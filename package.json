@@ -5,7 +5,8 @@
   "main": "src/build-index.js",
   "scripts": {
     "validate": "node src/validate.js",
-    "build": "node src/build-index.js"
+    "build": "node src/build-index.js",
+    "parse": "node src/parse.js"
   },
   "dependencies": {
     "ajv-cli": "^5.0.0",

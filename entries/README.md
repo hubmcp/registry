@@ -2,3 +2,65 @@
 
 Place each MCP registry entry as a JSON file in this folder.  
 Each file must follow the schema in `schema/metadata.schema.json`.
+
+
+```json
+[
+    {
+        "id": "87efdf29-e0f1-4f4d-a5e1-ecbe9a9ca73b",
+        "name": "example-mcp",
+        "description": "An example MCP package for testing",
+        "repository": {
+            "id": "b94b5f7e-c7c6-d760-2c78-a5e9b8a5b8c9",
+            "url": "https://github.com/registrymcp/example-mcp"
+        },
+        "packages": [
+            {
+                "registry": "npm",
+                "name": "@registrymcp/example-mcp",
+                "version": {
+                    "number": "0.1.0",
+                    "release_date": "2023-01-01T00:00:00Z"
+                },
+                "license": "Apache-2.0",
+                "command": {
+                    "name": "npx",
+                    "subcommands": [],
+                    "positional_arguments": [],
+                    "named_arguments": [
+                        {
+                            "short_flag": "-y",
+                            "requires_value": false,
+                            "is_required": false,
+                            "description": "Skip prompts"
+                        }
+                    ]
+                },
+                "environment_variables": [
+                    {
+                        "name": "API_KEY",
+                        "description": "API Key for the example MCP",
+                        "required": true,
+                        "default_value": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "87efdf29-e0f1-4f4d-a5e1-ecbe9a9ca73b",
+        "name": "example-mcp",
+        "description": "An example MCP package for testing",
+        "repository": {
+            "id": "b94b5f7e-c7c6-d760-2c78-a5e9b8a5b8c9",
+            "url": "https://github.com/registrymcp/example-mcp"
+        },
+        "remotes": [
+            {
+                "transport_type": "sse",
+                "url": "https://mcp-fs.example.com/sse"
+            }
+        ]
+    }
+]
+```

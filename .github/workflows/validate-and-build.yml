@@ -51,22 +51,37 @@ jobs:
         run: npm install
 
       - name: Build Index
-        run: npm run build && cp dist/index.json /tmp/index.json
+        run: npm run build
 
-      - name: Remove dist/index.json before switching branch
-        run: rm -f dist/index.json
+      - name: Copy dist folder to temp
+        run: cp -r dist /tmp/dist
+
+      - name: Remove all files from dist before switching branch
+        run: rm -rf dist/*
 
       - name: Checkout gh-pages branch
         run: |
           git fetch origin gh-pages:gh-pages
           git checkout gh-pages
 
-      - name: Copy built index.json from temp
-        run: cp /tmp/index.json dist/index.json
+      - name: Copy built dist folder from temp
+        run: cp -r /tmp/dist/* dist/
 
-      - name: Commit dist/index.json back to gh-pages
+      - name: List dist contents
+        run: ls -l dist
+
+      - name: Show git status
+        run: git status
+
+      - name: Show git diff
+        run: git diff dist/
+
+      - name: Add dist files to git
+        run: git add dist/*
+
+      - name: Commit dist back to gh-pages
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: 'chore: update dist/index.json'
+          commit_message: 'chore: update dist'
           branch: gh-pages
-          file_pattern: dist/index.json
+          file_pattern: dist/*
