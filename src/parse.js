@@ -53,12 +53,12 @@ function convertToV1(entry) {
     // O schema exige: id, name, description, repository (id, url), score, verified, license, packages, remotes
     // Adaptar os campos do seed.json conforme necessário
     return removeEmptyFields({
-        id: entry.id,
+        // id: entry.id,
         name: entry.name,
         description: entry.description || entry.name,
         license: entry.license && entry.license.trim() !== '' ? entry.license : 'Apache-2.0',
         repository: {
-            id: entry.repository?.name || '',
+            // id: entry.repository?.name || '',
             url: entry.repository?.url || '',
         },
         packages: (entry.registries || [])

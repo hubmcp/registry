@@ -5,16 +5,12 @@
     "items": {
         "type": "object",
         "required": [
-            "id",
             "name",
             "description",
             "repository",
             "license"
         ],
         "properties": {
-            "id": {
-                "type": "string"
-            },
             "name": {
                 "type": "string"
             },
@@ -27,13 +23,9 @@
             "repository": {
                 "type": "object",
                 "required": [
-                    "id",
                     "url"
                 ],
                 "properties": {
-                    "id": {
-                        "type": "string"
-                    },
                     "url": {
                         "type": "string",
                         "format": "uri"
@@ -168,7 +160,11 @@
                     ],
                     "properties": {
                         "transport_type": {
-                            "type": "string"
+                            "type": "string",
+                            "enum": [
+                                "streamable",
+                                "sse"
+                            ]
                         },
                         "url": {
                             "type": "string",
