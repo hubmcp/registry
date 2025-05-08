@@ -71,6 +71,6 @@ Want to add a new MCP package to the index? Follow these steps:
 
 ## References
 - [Metadata schema](schema/v1/metadata.schema.json)
-- [Example entry](entries/2025-05-08T08:42:27.945Z.json)
+- [Example entry](entries/README.md)
 
 If you have questions, open an issue or contact the maintainers.
