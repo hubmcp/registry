@@ -8,7 +8,8 @@
             "id",
             "name",
             "description",
-            "repository"
+            "repository",
+            "license"
         ],
         "properties": {
             "id": {
@@ -47,12 +48,19 @@
                         "registry",
                         "name",
                         "version",
-                        "license",
                         "command"
                     ],
                     "properties": {
                         "registry": {
-                            "type": "string"
+                            "type": "string",
+                            "enum": [
+                                "npm",
+                                "github",
+                                "gitlab",
+                                "bitbucket",
+                                "docker",
+                                "pypi"
+                            ]
                         },
                         "name": {
                             "type": "string"
@@ -72,9 +80,6 @@
                                     "format": "date-time"
                                 }
                             }
-                        },
-                        "license": {
-                            "type": "string"
                         },
                         "command": {
                             "type": "object",

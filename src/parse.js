@@ -37,6 +37,18 @@ function removeEmptyFields(obj) {
     return obj;
 }
 
+// Lê os registries permitidos diretamente do schema
+const schema = JSON.parse(fs.readFileSync(path.join(__dirname, '../schema/v1/metadata.schema.json'), 'utf-8'));
+let allowedRegistries = [];
+try {
+    // Corrigido para acessar o enum corretamente conforme o schema
+    allowedRegistries = (schema.items && schema.items.properties && schema.items.properties.packages && schema.items.properties.packages.items && schema.items.properties.packages.items.properties && schema.items.properties.packages.items.properties.registry && schema.items.properties.packages.items.properties.registry.enum) || [];
+
+} catch (e) {
+    console.error('Não foi possível ler allowedRegistries do schema:', e);
+    allowedRegistries = [];
+}
+
 function convertToV1(entry) {
     // O schema exige: id, name, description, repository (id, url), score, verified, license, packages, remotes
     // Adaptar os campos do seed.json conforme necessário
@@ -44,44 +56,42 @@ function convertToV1(entry) {
         id: entry.id,
         name: entry.name,
         description: entry.description || '',
-        license: entry.license || '',
+        license: entry.license && entry.license.trim() !== '' ? entry.license : 'Apache-2.0',
         repository: {
             id: entry.repository?.name || '',
             url: entry.repository?.url || '',
         },
-        packages: (entry.registries || []).map(pkg => ({
-            registry: pkg.name || '',
-            name: pkg.packagename || '',
-            version: {
-                number: String(pkg.version || entry.version || ''),
-                release_date: pkg.release_date || new Date().toISOString(),
-            },
-            license: pkg.license || '',
-            command: pkg.commandarguments
-                ? {
-                    name: pkg.commandarguments.name || '',
-                    subcommands: pkg.commandarguments.subcommands || [],
-                    positional_arguments: (pkg.commandarguments.positionalarguments || []).map(arg => arg.argument?.name || ''),
-                    named_arguments: (pkg.commandarguments.namedarguments || []).map(arg => ({
-                        short_flag: arg.argument?.name || '',
-                        requires_value: arg.argument?.isrequired || false,
-                        is_required: arg.argument?.isrequired || false,
-                        description: arg.argument?.description || '',
-                    })),
-                }
-                : {
-                    name: '',
-                    subcommands: [],
-                    positional_arguments: [],
-                    named_arguments: [],
+        packages: (entry.registries || [])
+            .filter(pkg => allowedRegistries.includes(pkg.name))
+            .map(pkg => ({
+                registry: pkg.name || '',
+                name: pkg.packagename || '',
+                version: {
+                    number: String(pkg.version || entry.version || ''),
+                    release_date: pkg.release_date || new Date().toISOString(),
                 },
-            environment_variables: (pkg.environmentvariables || []).map(env => ({
-                name: env.name || '',
-                description: env.description || '',
-                required: env.isrequired || false,
-                default_value: env.defaultvalue || '',
+                command: {
+                    name: (pkg.commandarguments && pkg.commandarguments.name) ? pkg.commandarguments.name : '',
+                    subcommands: (pkg.commandarguments && pkg.commandarguments.subcommands) ? pkg.commandarguments.subcommands : [],
+                    positional_arguments: (pkg.commandarguments && pkg.commandarguments.positionalarguments)
+                        ? pkg.commandarguments.positionalarguments.map(arg => arg.argument?.name || '')
+                        : [],
+                    named_arguments: (pkg.commandarguments && pkg.commandarguments.namedarguments)
+                        ? pkg.commandarguments.namedarguments.map(arg => ({
+                            short_flag: arg.argument?.name || '',
+                            requires_value: arg.argument?.isrequired || false,
+                            is_required: arg.argument?.isrequired || false,
+                            description: arg.argument?.description || '',
+                        }))
+                        : [],
+                },
+                environment_variables: (pkg.environmentvariables || []).map(env => ({
+                    name: env.name || '',
+                    description: env.description || '',
+                    required: env.isrequired || false,
+                    default_value: env.defaultvalue || '',
+                })),
             })),
-        })),
         remotes: Array.isArray(entry.remotes)
             ? entry.remotes.map(remote => ({
                 transport_type: remote.transport_type || '',
@@ -95,6 +105,12 @@ function convertToV1(entry) {
 if (!fs.existsSync(entriesDir)) {
     fs.mkdirSync(entriesDir);
 }
+// Remove todos os arquivos antigos exceto README.md
+fs.readdirSync(entriesDir).forEach(file => {
+    if (file !== 'README.md') {
+        fs.unlinkSync(path.join(entriesDir, file));
+    }
+});
 
 // Converte todos os servers
 const v1Entries = seed.map(convertToV1);
