@@ -30,8 +30,7 @@ Each file must follow the schema in `schema/metadata.schema.json`.
                     "named_arguments": [
                         {
                             "short_flag": "-y",
-                            "requires_value": false,
-                            "is_required": false,
+                            "required": false,
                             "description": "Skip prompts"
                         }
                     ]
