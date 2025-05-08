@@ -62,10 +62,10 @@ function convertToV1(entry) {
             url: entry.repository?.url || '',
         },
         packages: (entry.registries || [])
-            .filter(pkg => allowedRegistries.includes(pkg.name))
+            .filter(pkg => allowedRegistries.includes(pkg.packagename))
             .map(pkg => ({
-                registry: pkg.name || '',
-                name: pkg.packagename || '',
+                registry: pkg.packagename,
+                name: pkg.name || '',
                 version: {
                     number: String(pkg.version || entry.version || ''),
                     release_date: pkg.release_date || new Date().toISOString(),
@@ -115,6 +115,9 @@ fs.readdirSync(entriesDir).forEach(file => {
 // Converte todos os servers
 const v1Entries = seed.map(convertToV1);
 
+// Conta quantos packages foram incluídos no total
+const totalPackages = v1Entries.reduce((acc, entry) => acc + (Array.isArray(entry.packages) ? entry.packages.length : 0), 0);
+
 // Escreve o arquivo de saída
 fs.writeFileSync(outPath, JSON.stringify(v1Entries, null, 2), 'utf-8');
-console.log(`Arquivo salvo em: ${outPath} com ${v1Entries.length} servidores.`);
+console.log(`Arquivo salvo em: ${outPath} com ${v1Entries.length} servidores e ${totalPackages} packages incluídos.`);
