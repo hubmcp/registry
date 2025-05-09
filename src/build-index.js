@@ -5,9 +5,15 @@ const addFormats = require('ajv-formats');
 
 const entriesDir = path.join(__dirname, '../entries');
 const files = fs.readdirSync(entriesDir).filter(f => f.endsWith('.json'));
-const entries = files.map(f => {
+const entries = [];
+files.forEach(f => {
     const content = fs.readFileSync(path.join(entriesDir, f), 'utf-8');
-    return JSON.parse(content);
+    const parsed = JSON.parse(content);
+    if (Array.isArray(parsed)) {
+        entries.push(...parsed);
+    } else {
+        entries.push(parsed);
+    }
 });
 
 const distDir = path.join(__dirname, '../dist');
