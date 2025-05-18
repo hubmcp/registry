@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Caminhos
-const seedPath = path.join(__dirname, '../data/seed.json');
+const seedPath = path.join(__dirname, '../data/seed_2025_05_16.json');
 const entriesDir = path.join(__dirname, '../entries');
 const today = new Date().toISOString();
 const outPath = path.join(entriesDir, `${today}.json`);
