@@ -50,69 +50,73 @@ try {
 }
 
 function convertToV1(entry) {
-    // O schema exige: id, name, description, repository (id, url), score, verified, license, packages, remotes
-    // Adaptar os campos do seed.json conforme necessário
+
+    // Mapeia packages
+    const packages = Array.isArray(entry.packages) ? entry.packages.map(pkg => {
+
+        let registry = pkg.registry_name || pkg.registry || '';
+        if (!allowedRegistries.includes(registry)) {
+            console.warn(`Registry ${registry} não permitido para ${pkg.name}. Ignorando.`);
+            return null;
+        }
+
+        let command = registry === 'npm' ? 'npx' : registry === 'pypi' ? 'pip' : registry === 'docker' ? 'docker' : registry === 'github' ? 'gh' : registry === 'gitlab' ? 'gitlab' : registry === 'bitbucket' ? 'bitbucket' : '';
+
+        let argumentsArr = [];
+        let environmentArr = [];
+
+        if (pkg.package_arguments && pkg.package_arguments.length > 0) {
+            argumentsArr = pkg.package_arguments.map(arg => arg.value || arg.name || '');
+        }
+
+        if (pkg.environment_variables && pkg.environment_variables.length > 0) {
+            environmentArr = pkg.environment_variables.map(ev => {
+                return {
+                    name: ev.name,
+                    description: ev.description || ''
+                }
+            });
+        }
+
+        if (argumentsArr.length === 0 && command === 'npx') {
+            argumentsArr = [{
+                name: '-y',
+                description: 'Install dependencies'
+            }, {
+                name: `${pkg.name}@${pkg.version || 'latest'}`,
+                description: 'Package name'
+            }];
+        }
+
+        return {
+            registry,
+            name: pkg.name || '',
+            version: pkg.version || '',
+            command,
+            arguments: argumentsArr,
+            environment: environmentArr
+        };
+    }) : [];
+
     return removeEmptyFields({
-        // id: entry.id,
         name: entry.name,
         description: entry.description || entry.name,
-        license: entry.license && entry.license.trim() !== '' ? entry.license : 'Apache-2.0',
-        repository: {
-            // id: entry.repository?.name || '',
-            url: entry.repository?.url || '',
-        },
-        packages: (entry.registries || [])
-            .filter(pkg => allowedRegistries.includes(pkg.packagename))
-            .map(pkg => ({
-                registry: pkg.packagename,
-                name: pkg.name || '',
-                version: {
-                    number: String(pkg.version || entry.version || ''),
-                    release_date: pkg.release_date || new Date().toISOString(),
-                },
-                command: (() => {
-                    // Garante que todos os campos obrigatórios estejam presentes e válidos
-                    const positional = Array.isArray(pkg.commandarguments?.positionalarguments)
-                        ? pkg.commandarguments.positionalarguments.map(arg => arg.argument?.name || '').filter(Boolean)
-                        : [];
-                    let name = '';
-                    if (pkg.commandarguments && typeof pkg.commandarguments.name === 'string' && pkg.commandarguments.name.trim() !== '') {
-                        name = pkg.commandarguments.name;
-                    } else if (positional.length > 0) {
-                        name = positional[0];
-                    } else {
-                        name = 'run';
-                    }
-                    return {
-                        name,
-                        subcommands: Array.isArray(pkg.commandarguments?.subcommands)
-                            ? pkg.commandarguments.subcommands.filter(s => typeof s === 'string')
-                            : [],
-                        positional_arguments: positional,
-                        named_arguments: Array.isArray(pkg.commandarguments?.namedarguments)
-                            ? pkg.commandarguments.namedarguments.map(arg => ({
-                                short_flag: arg.argument?.name || '',
-                                required: arg.argument?.isrequired || false,
-                                description: arg.argument?.description || '',
-                            }))
-                            : [],
-                    };
-                })(),
-                environment_variables: (pkg.environmentvariables || []).map(env => ({
-                    name: env.name || '',
-                    description: env.description || '',
-                    required: env.isrequired || false,
-                    default_value: env.defaultvalue || '',
-                })),
-            })),
-        remotes: Array.isArray(entry.remotes)
-            ? entry.remotes.map(remote => ({
-                transport_type: remote.transport_type || '',
-                url: remote.url || '',
-            }))
-            : [],
+        repository: typeof entry.repository === 'object' && entry.repository.url ? entry.repository.url : (typeof entry.repository === 'string' ? entry.repository : ''),
+        packages
     });
 }
+
+// Cria a pasta de saída se não existir
+if (!fs.existsSync(entriesDir)) {
+    fs.mkdirSync(entriesDir);
+}
+
+// Remove todos os arquivos antigos exceto README.md
+fs.readdirSync(entriesDir).forEach(file => {
+    if (file !== 'README.md') {
+        fs.unlinkSync(path.join(entriesDir, file));
+    }
+});
 
 // Cria a pasta de saída se não existir
 if (!fs.existsSync(entriesDir)) {
