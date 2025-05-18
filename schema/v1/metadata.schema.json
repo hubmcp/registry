@@ -7,8 +7,7 @@
         "required": [
             "name",
             "description",
-            "repository",
-            "license"
+            "repository"
         ],
         "properties": {
             "name": {
@@ -21,16 +20,8 @@
                 "type": "string"
             },
             "repository": {
-                "type": "object",
-                "required": [
-                    "url"
-                ],
-                "properties": {
-                    "url": {
-                        "type": "string",
-                        "format": "uri"
-                    }
-                }
+                "type": "string",
+                "format": "uri"
             },
             "packages": {
                 "type": "array",
@@ -38,9 +29,7 @@
                     "type": "object",
                     "required": [
                         "registry",
-                        "name",
-                        "version",
-                        "command"
+                        "name"
                     ],
                     "properties": {
                         "registry": {
@@ -52,84 +41,32 @@
                                 "bitbucket",
                                 "docker",
                                 "pypi"
-                            ]
+                            ],
+                            "example": "npm"
                         },
                         "name": {
-                            "type": "string"
+                            "type": "string",
+                            "example": "@21st-dev/magic"
                         },
                         "version": {
-                            "type": "object",
-                            "required": [
-                                "number",
-                                "release_date"
-                            ],
-                            "properties": {
-                                "number": {
-                                    "type": "string"
-                                },
-                                "release_date": {
-                                    "type": "string",
-                                    "format": "date-time"
-                                }
-                            }
+                            "type": "string",
+                            "example": "0.0.46"
                         },
                         "command": {
-                            "type": "object",
-                            "required": [
-                                "name",
-                                "positional_arguments"
-                            ],
-                            "properties": {
-                                "name": {
-                                    "type": "string"
-                                },
-                                "subcommands": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    }
-                                },
-                                "positional_arguments": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    }
-                                },
-                                "named_arguments": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "object",
-                                        "required": [
-                                            "short_flag",
-                                            "description"
-                                        ],
-                                        "properties": {
-                                            "short_flag": {
-                                                "type": "string"
-                                            },
-                                            "requires_value": {
-                                                "type": "boolean"
-                                            },
-                                            "required": {
-                                                "type": "boolean"
-                                            },
-                                            "description": {
-                                                "type": "string"
-                                            }
-                                        }
-                                    }
-                                }
-                            }
+                            "type": "string",
+                            "description": "Command to run the package",
+                            "example": "mcp"
                         },
-                        "environment_variables": {
+                        "arguments": {
                             "type": "array",
                             "items": {
-                                "type": "object",
+                                "type": [
+                                    "object",
+                                    "string"
+                                ],
                                 "required": [
                                     "name",
-                                    "description",
-                                    "required",
-                                    "default_value"
+                                    "description"
                                 ],
                                 "properties": {
                                     "name": {
@@ -138,10 +75,25 @@
                                     "description": {
                                         "type": "string"
                                     },
-                                    "required": {
-                                        "type": "boolean"
+                                    "value": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        },
+                        "environment": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "required": [
+                                    "name",
+                                    "description"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
                                     },
-                                    "default_value": {
+                                    "description": {
                                         "type": "string"
                                     }
                                 }
