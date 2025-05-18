@@ -130,7 +130,10 @@ fs.readdirSync(entriesDir).forEach(file => {
 });
 
 // Converte todos os servers
-const v1Entries = seed.map(convertToV1);
+let v1Entries = seed.map(convertToV1);
+
+// Remove entradas vazias ou nulas
+v1Entries = v1Entries.filter(entry => entry !== null && Object.keys(entry).length > 0);
 
 // Conta quantos packages foram incluídos no total
 const totalPackages = v1Entries.reduce((acc, entry) => acc + (Array.isArray(entry.packages) ? entry.packages.length : 0), 0);
