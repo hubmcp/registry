@@ -15,18 +15,13 @@ The [stdio](https://modelcontextprotocol.io/docs/concepts/transports#standard-in
     {
         "name": "example-mcp",
         "description": "An example MCP package for testing",
-        "repository": {
-            "url": "https://github.com/registrymcp/example-mcp"
-        },
+        "license": "Apache-2.0",
+        "repository": "https://github.com/registrymcp/example-mcp",
         "packages": [
             {
                 "registry": "npm",
                 "name": "@registrymcp/example-mcp",
-                "version": {
-                    "number": "0.1.0",
-                    "release_date": "2023-01-01T00:00:00Z"
-                },
-                "license": "Apache-2.0",
+                "version": "0.1.0",
                 "command": {
                     "name": "npx",
                     "subcommands": [],
@@ -62,6 +57,7 @@ The [SSE](https://modelcontextprotocol.io/docs/concepts/transports#server-sent-e
     {
         "name": "example-mcp",
         "description": "An example MCP package for testing",
+        "license": "Apache-2.0",
         "repository": {
             "url": "https://github.com/registrymcp/example-mcp"
         },
